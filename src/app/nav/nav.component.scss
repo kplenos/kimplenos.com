@@ -1,0 +1,37 @@
+.navbar {
+  padding: 2rem 1rem;
+  background-color: transparent;
+
+  .navbar-brand {
+    width: 53px;
+    height: 61px;
+    background: url('/assets/images/kimplenos-logo.png');
+    background-repeat: no-repeat;
+    color: #fff;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      padding: 0 1.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+
+      &:hover {
+        color: #fee13b;
+      }
+
+      &.active {
+        color: #fee13b;
+      }
+    }
+  }
+}
