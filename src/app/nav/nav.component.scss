@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .navbar {
   padding: 2rem 1rem;
   background-color: transparent;
@@ -10,12 +12,28 @@
     color: #fff;
   }
 
+  .navbar-toggler {
+    z-index: 1050;
+  }
+  .navbar-toggler-icon {
+    background: url('/assets/images/navbar-toggler.svg');
+    background-repeat: no-repeat;
+    @include transition(0.2s);
+
+    &:hover {
+      width: 1.8em;
+      height: 1.8em;
+      @include transition(0.2s);
+    }
+  }
+
   .navbar-collapse {
     justify-content: flex-end;
   }
 }
 
 .navbar-nav {
+  text-align: center;
   .nav-item {
     .nav-link {
       padding: 0 1.5rem;
@@ -33,5 +51,51 @@
         color: #fee13b;
       }
     }
+  }
+}
+
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1020;
+  @include transition(0.35s);
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      .nav-link {
+        padding: 1rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+
+        &:hover {
+          color: #fee13b;
+        }
+
+        &.active {
+          color: #fee13b;
+        }
+      }
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    @include transition(0.35s);
+    z-index: 1020;
   }
 }

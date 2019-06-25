@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-	appTitle: string = 'Kimplenos.com';
+    appTitle: string = 'Kimplenos.com';
+    isNavCollapse: boolean = false;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    showMenu(): void {
+        if (this.isNavCollapse) {
+            this.isNavCollapse = false;
+        } else {
+            this.isNavCollapse = true;
+        }
+    }
+
 
 }

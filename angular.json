@@ -29,8 +29,13 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/all.min.css",
-              "src/styles.scss"
+              "src/sass/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            },
             "scripts": [
               "src/assets/js/jquery-3.3.1.slim.min.js",
               "src/assets/js/popper.min.js",
@@ -92,7 +97,7 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/css/all.min.css",
-              "src/styles.scss"
+              "src/sass/styles.scss"
             ],
             "scripts": [
               "src/assets/js/jquery-3.3.1.slim.min.js",
