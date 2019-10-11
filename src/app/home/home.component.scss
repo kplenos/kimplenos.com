@@ -5,7 +5,7 @@
   background-color: #1fb0ff;
   overflow: hidden;
 
-  @media (mmin-width: 1900px) {
+  @media (min-width: 1900px) {
     padding: 10rem 0 0;
   }
 
@@ -82,7 +82,7 @@
     animation: wavyisland 5s infinite;
 
     @media (min-width: 1900px) {
-      height: 20%;
+      height: 55%;
     }
   }
 
@@ -134,7 +134,7 @@
 @keyframes wavyisland {
   0% {
     bottom: 0%;
-    @media (mmin-width: 1900px) {
+    @media (min-width: 1900px) {
       bottom: 20%;
     }
   }
@@ -142,7 +142,7 @@
   50% {
     bottom: 3%;
 
-    @media (mmin-width: 1900px) {
+    @media (min-width: 1900px) {
       bottom: 22%;
     }
   }
@@ -150,7 +150,7 @@
   100% {
     bottom: 0%;
 
-    @media (mmin-width: 1900px) {
+    @media (min-width: 1900px) {
       bottom: 20%;
     }
   }
