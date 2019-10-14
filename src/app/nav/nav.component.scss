@@ -7,14 +7,59 @@
   .navbar-brand {
     width: 75px;
     height: 75px;
-    background: url('/assets/images/kimplenos.svg');
+    background: url('/assets/images/kimplenos-v2.svg');
     background-repeat: no-repeat;
     color: #fff;
   }
 
   .navbar-toggler {
     z-index: 1050;
+
+    .navbar-toggler-bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin: 0 0 6px;
+      background-color: #fff;
+    }
+
+    .bar-01 {
+      transform: translateY(0) rotate(0deg);
+      @include transition(0.2s);
+    }
+
+    .bar-02 {
+      opacity: 1;
+      @include transition(0.2s);
+    }
+
+    .bar-03 {
+      transform: translateY(0) rotate(0deg);
+      @include transition(0.2s);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      .bar-01 {
+        transform: translateY(8px) rotate(40deg);
+        @include transition(0.2s);
+      }
+
+      .bar-02 {
+        opacity: 0;
+        @include transition(0.2s);
+      }
+
+      .bar-03 {
+        transform: translateY(-8px) rotate(140deg);
+        @include transition(0.2s);
+      }
+    }
   }
+
   .navbar-toggler-icon {
     background: url('/assets/images/navbar-toggler.svg');
     background-repeat: no-repeat;

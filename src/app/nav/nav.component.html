@@ -1,8 +1,11 @@
 <nav class="navbar fixed-top">
   <div class="container">
     <a class="navbar-brand" routerLink="/"></a>
-    <button class="navbar-toggler" type="button" (click)="showMenu()">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" [ngClass]="{ 'active': isNavCollapse }" type="button" (click)="showMenu()">
+      <!--<span class="navbar-toggler-icon"></span>-->
+      <span class="navbar-toggler-bar bar-01"></span>
+      <span class="navbar-toggler-bar bar-02"></span>
+      <span class="navbar-toggler-bar bar-03"></span>
     </button>
   </div>
 </nav>
