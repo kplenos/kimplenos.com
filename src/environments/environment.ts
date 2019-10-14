@@ -11,7 +11,7 @@ export const environment = {
         projectId: "kimplenosapp",
         storageBucket: "kimplenosapp.appspot.com",
         messagingSenderId: "1080088490858",
-        //appId: "1:1080088490858:web:49dbbbf33dfd6f23"
+        appId: "1:1080088490858:web:49dbbbf33dfd6f23"
     }
 };
 

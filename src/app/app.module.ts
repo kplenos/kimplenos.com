@@ -13,7 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule  } from '@angular/fire/firestore';
+//import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 
 @NgModule({
@@ -30,9 +31,10 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-      AppRoutingModule,
-      AngularFireModule.initializeApp(environment.firebaseConfig),
-      AngularFireDatabaseModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
+    //AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
