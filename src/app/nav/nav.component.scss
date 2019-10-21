@@ -99,6 +99,46 @@
   }
 }
 
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-right: 1px solid rgba(255,255,255,0.4);
+  z-index: 100;
+  text-align: right;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding: 3rem 0;
+      font-size: 11px;
+      color: #fff;
+      text-transform: capitalize;
+
+      &:after {
+        position: absolute;
+        top: 56px;
+        right: -16px;
+        display: block;
+        content: '';
+        width: 7px;
+        border-top: 1px solid #fff;
+        height: 10px;
+      }
+    }
+  }
+}
+
 .navbar-custom {
   position: fixed;
   top: 0;

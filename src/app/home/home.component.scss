@@ -17,6 +17,12 @@
     text-align: center;
     color: #fff;
     line-height: 0.9;
+    -webkit-animation: textwave 2s infinite alternate;
+    animation: textwave 3s infinite alternate;
+
+    @media(min-width: 1900px) {
+      margin: 6rem auto;
+    }
 
     .design {
       display: block;
@@ -82,21 +88,23 @@
     animation: wavyisland 5s infinite;
 
     @media (min-width: 1900px) {
-      height: 55%;
+      height: 45%;
     }
   }
 
   &-ocean {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: -16px;
+    left: -10%;
+    width: 120%;
     height: 10vh;
     //background-color: #345e9e;
     background-color: rgba(42, 53, 120, 0.65);
+    -webkit-animation: wave 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: wave 5s infinite;
 
     @media (min-width: 1900px) {
-      height: 30vh;
+      height: 20vh;
     }
 
     .wave {
@@ -107,6 +115,28 @@
       height: 15px;
       background: url('/assets/images/wave.png') repeat-x;
     }
+  }
+}
+
+@keyframes textwave {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY( -10px );
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
   }
 }
 
@@ -206,6 +236,9 @@
   }
 
   &--inquiry {
-    background-color: #1a428a;
+    background: #1a428a url('/assets/images/footer-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
   }
 }
