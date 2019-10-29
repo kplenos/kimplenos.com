@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 
     .fab {
       padding: 2rem;
@@ -17,7 +17,9 @@
 
   .col-made {
     font-size: 0.75rem;
+    font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
+    .fas { padding-left: 0; }
   }
 }

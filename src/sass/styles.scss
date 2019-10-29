@@ -7,6 +7,22 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: #fff;
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    color: #fee13b;
+    text-decoration: none;
+    transition: 0.2s all ease-in-out;
+  }
+}
+
+// font-awesome icons
+.fas {
+  padding-left: 0.5rem;
+}
+
 .banner-inner {
 	display: flex;
 	align-items: center;
