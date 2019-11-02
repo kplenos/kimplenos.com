@@ -383,6 +383,17 @@
     }
   }
 
+  .title {
+    margin: 0 0 4rem;
+    //font-family: 'Old Standard TT', serif;
+    font-family: 'Prata', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-align: center;
+  }
+
   &--about {
     position: relative;
     display: flex;
@@ -428,7 +439,8 @@
       }
 
       .fish {
-        fill: #fff;
+        //fill: #4a648e;
+        fill: #455d84;
       }
     }
 
@@ -489,14 +501,7 @@
     background-color: #2c5697;
 
     .title {
-      margin: 0 0 4rem;
-      //font-family: 'Old Standard TT', serif;
-      font-family: 'Prata', serif;
-      font-size: 4rem;
-      font-weight: 400;
-      font-style: normal;
-      color: #fff;
-      text-align: center;
+    
     }
 
     .skills {
@@ -599,10 +604,18 @@
     }
 
     .portfolio-full {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: top center;
+      .portfolio-img {
+        width: 40vw;
+        height: 70vh;
+        background: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
     }
 
     .portfolio-half {

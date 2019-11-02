@@ -125,6 +125,21 @@
       color: #fff;
       text-transform: capitalize;
       letter-spacing: 1px;
+      opacity: 0.5;
+      transition: 0.5s all ease;
+
+      &.active {
+        font-weight: 600;
+        opacity: 1;
+        transition: 0.5s all ease;
+      }
+
+      &:hover {
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.5s all ease;
+        opacity: 1;
+      }
 
       &:after {
         position: absolute;
