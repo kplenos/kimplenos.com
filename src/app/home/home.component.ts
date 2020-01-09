@@ -53,8 +53,9 @@ export class HomeComponent implements OnInit {
             //     console.log(i);
             // }, 3000));
             const rightNavLink = $('.right-nav .nav-link');
-            const gotoFeatured = $('#gotoFeatured');
-            gotoFeatured.on('click', function() {
+            const gotoFeatured = $('.goToFeatured');
+            gotoFeatured.on('click', function(e) {
+                e.preventDefault();
                 rightNavLink.removeClass('active');
                 $('#navlink-portfolio').addClass('active');
                 $('html, body').animate({
