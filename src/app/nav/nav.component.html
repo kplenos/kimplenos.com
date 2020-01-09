@@ -1,11 +1,26 @@
 <nav class="navbar fixed-top">
   <div class="container">
     <a class="navbar-brand" routerLink="/"></a>
-    <button class="navbar-toggler" type="button" (click)="showMenu()">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" [ngClass]="{ 'active': isNavCollapse }" type="button" (click)="showMenu()">
+      <!--<span class="navbar-toggler-icon"></span>-->
+      <span class="navbar-toggler-bar bar-01"></span>
+      <span class="navbar-toggler-bar bar-02"></span>
+      <span class="navbar-toggler-bar bar-03"></span>
     </button>
   </div>
 </nav>
+
+<nav class="right-nav">
+  <ul>
+    <li id="navlink-intro" class="nav-link active" data-link="#sxn-intro">Intro</li>
+    <li id="navlink-about" class="nav-link" data-link="#sxn-about">About</li>
+    <li id="navlink-skills" class="nav-link" data-link="#sxn-skills">What I Do</li>
+    <li id="navlink-portfolio" class="nav-link" data-link="#sxn-portfolio">Featured</li>
+    <li id="navlink-portfolio-selected" class="nav-link" data-link="#sxn-portfolio-selected">Portfolio</li>
+    <li id="navlink-inquiry" class="nav-link" data-link="#sxn-inquiry">Contact</li>
+  </ul>
+</nav>
+
 <div class="navbar-custom" [ngClass]="{ 'show': isNavCollapse }">
   <ul>
     <li>

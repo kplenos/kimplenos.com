@@ -5,16 +5,61 @@
   background-color: transparent;
 
   .navbar-brand {
-    width: 53px;
-    height: 61px;
-    background: url('/assets/images/kimplenos-logo.png');
+    width: 75px;
+    height: 75px;
+    background: url('/assets/images/kimplenos-v2.svg');
     background-repeat: no-repeat;
     color: #fff;
   }
 
   .navbar-toggler {
     z-index: 1050;
+
+    .navbar-toggler-bar {
+      display: block;
+      width: 30px;
+      height: 2px;
+      margin: 0 0 6px;
+      background-color: #fff;
+    }
+
+    .bar-01 {
+      transform: translateY(0) rotate(0deg);
+      @include transition(0.2s);
+    }
+
+    .bar-02 {
+      opacity: 1;
+      @include transition(0.2s);
+    }
+
+    .bar-03 {
+      transform: translateY(0) rotate(0deg);
+      @include transition(0.2s);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      .bar-01 {
+        transform: translateY(8px) rotate(40deg);
+        @include transition(0.2s);
+      }
+
+      .bar-02 {
+        opacity: 0;
+        @include transition(0.2s);
+      }
+
+      .bar-03 {
+        transform: translateY(-8px) rotate(140deg);
+        @include transition(0.2s);
+      }
+    }
   }
+
   .navbar-toggler-icon {
     background: url('/assets/images/navbar-toggler.svg');
     background-repeat: no-repeat;
@@ -49,6 +94,62 @@
 
       &.active {
         color: #fee13b;
+      }
+    }
+  }
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  margin-right: 1rem;
+  padding: 1rem 0.8rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+  text-align: right;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding: 3rem 0;
+      font-size: 11px;
+      color: #fff;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      opacity: 0.5;
+      transition: 0.5s all ease;
+
+      &.active {
+        font-weight: 600;
+        opacity: 1;
+        transition: 0.5s all ease;
+      }
+
+      &:hover {
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.5s all ease;
+        opacity: 1;
+      }
+
+      &:after {
+        position: absolute;
+        top: 56px;
+        right: -14px;
+        display: block;
+        content: '';
+        width: 7px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        height: 10px;
       }
     }
   }
